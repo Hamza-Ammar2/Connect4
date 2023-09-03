@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+
+    <link rel = "stylesheet" href="style.css" />
+    <style>
+        a {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (width <= 560px) {
+            .menu {
+                width: 400px;
+            }
+
+            .menu button {
+                font-size: 1.5rem;
+            }
+
+            .welcome {
+                font-size: 1.9rem;
+            }
+        }
+
+
+        @media (width <= 375px) {
+            .menu button {
+                font-size: 1rem;
+            }
+
+            .welcome {
+                font-size: 1.8rem;
+            }
+
+            .menu {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="welcome">Welcome To Connect 4!</h1>
+    <div class="menu">
+        <a href="index.html">
+            <button>Play Against Computer</button>
+        </a>
+        <a href="human.html">
+            <button>Play Against Human</button>
+        </a>
+    </div>
+    <footer></footer>
+</body>
+</html>

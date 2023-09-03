@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+    <header>
+        <a href="menu.html">
+            <button id="menu">Menu</button>
+        </a>
+        <div class="balls">
+            <div class="ball-sm yellow"></div>
+            <div class="ball-sm pink"></div>
+            <div class="ball-sm pink"></div>
+            <div class="ball-sm yellow"></div>
+        </div>
+        <button id="restart">Restart</button>
+    </header>
+    <main>
+        <div class="player-cont-1">
+            <div class="player-card card-left">
+                <div class="ball pink">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="smile"></div>
+                </div>
+                <h4>Player 1</h4>
+                <h1 id="player1">0</h1>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="game"></div>
+        </div>
+
+        <div class="player-cont-2">
+            <div class="player-card card-right">
+                <div class="ball yellow ball-left">
+                    <div class="eyes left">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="smile Left"></div>
+                </div>
+                <h4>Player 2</h4>
+                <h1 id="player2">0</h1>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+
+    <script src="brain.js"></script>
+    <script src="game.js"></script>
+    <script>
+        let game = new Game("2");
+    </script>
+    <script src="init.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    background-color: blueviolet;
+    z-index: 2;
+    padding: 20px 0 20px 0;
+}
+
+header button {
+    border: none;
+    background-color: rgb(86, 51, 211);
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.balls {
+    display: grid;
+    grid-template-columns: repeat(2, 20px);
+    grid-template-rows: repeat(2, 20px);
+    gap: 5px;
+}
+
+.ball-sm {
+    border-radius: 50%;
+    border: 3px solid black;
+    border-bottom: 4px solid black;
+}
+
+.yellow {
+    background-color: rgb(255, 230, 0);
+}
+
+.pink {
+    background-color: rgb(255, 0, 119);
+}
+
+.cont {
+    width: min-content;
+    height: min-content;
+    border: 2px solid black;
+    border-radius: 10px 10px 20px 20px;
+    border-bottom: 10px solid black;
+}
+
+.game {
+    border: 10px solid white;
+    width: calc(500px - 20px);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 69px 69px 69px 69px 69px 69px 69px;
+    grid-auto-rows: 69px 69px 69px 69px 69px 69px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    z-index: 2;
+}
+
+.player-card {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid black;
+    border-radius: 18px;
+    text-align: center;
+    border-bottom: 8px solid black;
+}
+
+.player-card * {
+    margin: 0;
+}
+
+.player-card h4 {
+    margin-top: 10px;
+}
+
+.ball {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    top: -16.5px;
+    left: calc(50% - 5px);
+    transform: scale(400%, 400%);
+    border-radius: 50%;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.mask {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.hole {
+    width: 90%;
+    height: 90%;
+    border: 25px solid white;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+@keyframes move {
+    from {
+
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+.piece {
+    animation: move 1s ease forwards;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    border-radius: 30px 30px 0 0;
+    background-color: rgb(98, 6, 184);
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.menu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    border-bottom: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.menu button {
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(98, 6, 184);
+    color: white;
+    font-size: 2rem;
+}
+
+
+.welcome {
+    font-size: 3rem;
+    color: white;
+    margin-top: 120px;
+}
+
+.contain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.end-box {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: blueviolet;
+    color: white;
+}
+
+.contain button {
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-300%, 200%);
+}
+
+.ball {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.smile {
+    width: 50%;
+    height: 3px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.eyes {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.eye {
+    height: 2px;
+    border-right: 1px solid black;
+}
+
+.eyes:first-child {
+    margin-right: 4px;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.left:first-child {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.player-cont-1, .player-cont-2 {
+    background-color: blueviolet;
+}
